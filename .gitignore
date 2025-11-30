@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/venv/
+backend/env/
+backend/.venv/
+.venv/
+venv/
+env/
+
+# Build and distribution
+dist/
+frontend/dist/
+build/
+backend/catboost_info/
+backend/models/
+backend/data/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+backend/__pycache__/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# Logs
+logs/
+backend/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE / Editor folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Misc
+backend/data/
+frontend/bun.lockb
