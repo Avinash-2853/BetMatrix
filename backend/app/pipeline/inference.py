@@ -470,3 +470,4 @@ def get_inputs(home_team: str, away_team: str, home_coach: str, away_coach: str,
     return input_df[expected_order]
 # sync 1774962858079275190
 # sys_sync_16112cbb
+# sys_sync_442b349
