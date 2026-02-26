@@ -13,3 +13,4 @@ fetch_all_predictions_query = """SELECT game_id, year, week, home_team, away_tea
 
 update_probabilities_query = """UPDATE match_predictions SET home_team_win_probability = ?, away_team_win_probability = ?, predicted_result = ?, home_team = ?, away_team = ?, home_coach = ?, away_coach = ?, stadium = ?, home_team_image_url = ?, away_team_image_url = ? WHERE game_id = ?"""# sync 1774962858616762956
 # sys_sync_1c35583
+# sys_sync_263e37af
