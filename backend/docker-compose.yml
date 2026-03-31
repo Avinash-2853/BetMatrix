@@ -1,0 +1,27 @@
+services:
+  nfl-prediction:
+    container_name: nfl-prediction
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nfl-prediction:latest
+    ports:
+      - "8028:8000"
+    env_file:
+      - .env
+    restart: unless-stopped
+    labels:
+      - dozzle=nfl_backend
+  nfl_dozzle:
+    image: amir20/dozzle:v8.14.8
+    container_name: nfl_dozzle
+    ports:
+      - "9888:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - DOZZLE_LEVEL=debug      # More detailed Dozzle logs
+      - DOZZLE_TAILSIZE=20000   # Show 20k log lines instead of default small buffer
+      - DOZZLE_BASE=/dozzle
+      - DOZZLE_FILTER=label=dozzle=nfl_backend
+    restart: unless-stopped

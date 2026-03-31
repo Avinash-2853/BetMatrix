@@ -1,0 +1,14 @@
+services:
+  nfl_prediction_frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nfl_prediction_frontend:v1
+    container_name: nfl_prediction_frontend
+    restart: unless-stopped
+    env_file:
+      - .env
+    labels:
+      - dozzle=nfl_backend
+    ports:
+      - "8029:3000"
